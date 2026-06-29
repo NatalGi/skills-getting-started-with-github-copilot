@@ -59,19 +59,135 @@ section h3 {
 
 .activity-card {
   margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 18px;
+  border: 1px solid rgba(26, 35, 126, 0.12);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9ff 100%);
+  box-shadow: 0 10px 25px rgba(17, 24, 39, 0.06);
 }
 
 .activity-card h4 {
-  margin-bottom: 10px;
-  color: #0066cc;
+  margin: 0;
+  color: #16205b;
+  font-size: 1.1rem;
 }
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-card__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.activity-card__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.activity-card__badge.is-open {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.activity-card__badge.is-full {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.activity-card__description {
+  color: #4b5563;
+}
+
+.activity-card__meta {
+  display: grid;
+  gap: 12px;
+  margin: 14px 0 16px;
+}
+
+.activity-card__meta dt {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.activity-card__meta dd {
+  margin: 0;
+  color: #111827;
+}
+
+.activity-card__participants {
+  margin-top: 6px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(26, 35, 126, 0.12);
+}
+
+.activity-card__participants h5 {
+  margin-bottom: 10px;
+  color: #16205b;
+  font-size: 0.95rem;
+}
+
+.activity-card__participants ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  color: #374151;
+}
+
+.activity-card__participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.activity-card__participant-item span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.participant-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid rgba(198, 40, 40, 0.18);
+  border-radius: 999px;
+  background: #fff;
+  color: #c62828;
+  box-shadow: none;
+  flex: 0 0 auto;
+}
+
+.participant-remove:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(198, 40, 40, 0.12);
+}
+
+.participant-remove svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
 }
 
 .form-group {
@@ -94,18 +210,20 @@ section h3 {
 }
 
 button {
-  background-color: #1a237e;
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 11px 16px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 999px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 20px rgba(26, 35, 126, 0.18);
 }
 
 button:hover {
-  background-color: #3949ab;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px rgba(26, 35, 126, 0.22);
 }
 
 .message {
